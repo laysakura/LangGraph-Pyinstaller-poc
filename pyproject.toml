@@ -1,0 +1,25 @@
+[project]
+name = "langgraph-pyinstaller-poc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3.19",
+    "langchain-openai>=0.3.7",
+    "langgraph>=0.2.74",
+    "openai>=1.64.0",
+    "langchain-community>=0.3.18",
+    "langchain-core>=0.3.39",
+    "langchain-experimental>=0.3.4",
+    "numexpr>=2.10.2",
+]
+
+# コマンドラインツールのエントリポイント定義
+[project.scripts]
+chatbot = "chatbot:main"
+
+[tool.uv]
+dev-dependencies = [
+    "nuitka>=2.6.7",
+]
